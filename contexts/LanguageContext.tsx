@@ -1,5 +1,6 @@
 import React, { createContext, FC, useEffect, useState } from "react";
-import { fr, enUS } from "date-fns/locale";
+import fr from "date-fns/locale/fr";
+import enUS from "date-fns/locale/en-US";
 import { Locale as DateLocale } from "date-fns";
 
 export type Locale = "fr" | "en";
