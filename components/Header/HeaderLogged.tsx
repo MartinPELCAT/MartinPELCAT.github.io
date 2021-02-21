@@ -24,7 +24,7 @@ export const HeaderLogged = () => {
             <div className="flex rounded-full hover:bg-white hover:bg-opacity-10 py-1 pl-2 pr-4 space-x-3">
               <div className="w-10 h-10 rounded-full bg-white bg-opacity-40 overflow-hidden">
                 <img
-                  src="http://www.github.com/MartinPELCAT.png"
+                  src="https://www.github.com/MartinPELCAT.png"
                   alt="Github profile"
                 />
               </div>

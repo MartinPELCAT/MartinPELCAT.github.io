@@ -1,11 +1,12 @@
 import { AppProps } from "next/app";
+import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import { UserContextProvider } from "../contexts/UserContext";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <UserContextProvider>
-      <head>
+      <Head>
         <title>Portfolio | Martin PELCAT</title>
         <meta content="IE=edge" http-equiv="X-UA-Compatible" />
         <meta content="Portfolio de Martin PELCAT" name="description" />
@@ -27,7 +28,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link href="https://github.com" rel="preconnect" />
         <link href="https://avatars1.githubusercontent.com" rel="preconnect" />
         <meta content="width=device-width,initial-scale=1" name="viewport" />
-      </head>
+      </Head>
       <Component {...pageProps} />
     </UserContextProvider>
   );
