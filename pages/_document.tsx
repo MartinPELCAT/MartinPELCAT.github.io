@@ -5,7 +5,7 @@ export default class CustomDocument extends Document {
     return (
       <Html>
         <Head />
-        <body className="antialiased min-h-screen font-Poppins">
+        <body className="antialiased">
           <Main />
           <NextScript />
         </body>

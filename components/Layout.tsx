@@ -3,9 +3,9 @@ import Header from "./Header/Header";
 
 export const Layout: FC = ({ children }) => {
   return (
-    <>
+    <div className="min-h-screen">
       <Header />
-      <div>{children}</div>
-    </>
+      <div className="md:w-1/2 mx-auto flex px-1 py-4">{children}</div>
+    </div>
   );
 };

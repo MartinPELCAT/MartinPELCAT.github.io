@@ -8,9 +8,9 @@ const App = ({ Component, pageProps }: AppProps) => {
     <UserContextProvider>
       <Head>
         <title>Portfolio | Martin PELCAT</title>
-        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
         <meta content="Portfolio de Martin PELCAT" name="description" />
-        <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
+        <meta content="text/html;charset=UTF-8" httpEquiv="Content-Type" />
         <meta content="index,follow" name="robots" />
         <meta content="Martin PELCAT" name="author" />
         <meta
