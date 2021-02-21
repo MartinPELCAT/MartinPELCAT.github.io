@@ -5,6 +5,7 @@ import { HeaderContext } from "../../contexts/HeaderContext";
 import { UserContext } from "../../contexts/UserContext";
 import Link from "next/link";
 import { ChevronDown } from "../icons/ChevronDown";
+import { LanguageContext } from "../../contexts/LanguageContext";
 
 export const HeaderLogged = () => {
   const { firstName, lastName } = useContext(UserContext);
@@ -54,6 +55,7 @@ export const HeaderLogged = () => {
 type DropdownMenuProps = { show: boolean };
 
 const DropDownMenu = ({ show }: DropdownMenuProps) => {
+  const { setLocale } = useContext(LanguageContext);
   return (
     <div
       className={clsx(
@@ -63,6 +65,11 @@ const DropDownMenu = ({ show }: DropdownMenuProps) => {
     >
       <DropDownItem link="/admin" label="Administration" icon={<></>} />
       <DropDownItem label="Paramètres" icon={<></>} />
+      <DropDownItem
+        label="Language"
+        icon={<></>}
+        onClick={() => setLocale((prev) => (prev === "fr" ? "en" : "fr"))}
+      />
       <DropDownItem label="Deconnexion" icon={<></>} />
     </div>
   );
@@ -79,6 +86,7 @@ const DropDownItem = ({ label, icon, onClick, link }: DropDownItemProps) => {
   const { setIsOpen } = useContext(HeaderContext);
   const DefaultItem = () => (
     <div
+      role="button"
       className="py-1 align-middle px-2 flex space-x-2 hover:bg-white hover:bg-opacity-10 rounded"
       onClick={(event) => {
         onClick && onClick(event);
