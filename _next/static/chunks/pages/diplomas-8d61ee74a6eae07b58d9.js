@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[8],{WShA:function(n,i,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/diplomas",function(){return o("l7xE")}])},l7xE:function(n,i,o){"use strict";o.r(i);var _=o("nKUr"),t=(o("q1tI"),o("apO0"));i.default=function(){return Object(_.jsx)(t.a,{children:"Diplomas"})}}},[["WShA",0,2,1,3]]]);
