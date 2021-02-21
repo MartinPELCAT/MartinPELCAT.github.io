@@ -12,6 +12,15 @@ module.exports = {
       margin: {
         "3px": "3px",
       },
+      backgroundColor: {
+        "light-gray": "#f0f2f5",
+      },
+      textColor: {
+        primary: "#050505",
+      },
+      borderColor: {
+        "light-gray": "#f0f2f5",
+      },
     },
   },
   variants: {

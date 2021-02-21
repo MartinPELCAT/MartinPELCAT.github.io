@@ -60,7 +60,7 @@ const DropDownMenu = ({ show }: DropdownMenuProps) => {
     <div
       className={clsx(
         [!show && "hidden"],
-        "absolute top-14 right-0 bg-gray-700 border border-gray-300 w-60 rounded-lg p-2"
+        "absolute top-14 right-0 bg-white border border-gray-300 w-60 rounded-lg p-2"
       )}
     >
       <DropDownItem link="/admin" label="Administration" icon={<></>} />
@@ -87,7 +87,7 @@ const DropDownItem = ({ label, icon, onClick, link }: DropDownItemProps) => {
   const DefaultItem = () => (
     <div
       role="button"
-      className="py-1 align-middle px-2 flex space-x-2 hover:bg-white hover:bg-opacity-10 rounded"
+      className="py-1 align-middle px-2 flex space-x-2 hover:bg-light-gray rounded"
       onClick={(event) => {
         onClick && onClick(event);
         setIsOpen(false);

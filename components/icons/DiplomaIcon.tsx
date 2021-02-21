@@ -1,7 +1,7 @@
 import { IconProps } from "./IconProps";
 
 export const DiplomaIcon = ({
-  fill = "white",
+  fill = "gray",
   height = 24,
   width = 24,
 }: IconProps) => (

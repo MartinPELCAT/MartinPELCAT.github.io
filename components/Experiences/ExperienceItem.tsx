@@ -13,7 +13,7 @@ export const ExperienceItem = (props: ExperienceType) => {
   };
 
   return (
-    <div className="bg-gray-200 rounded-lg flex flex-1 p-4 shadow-md flex-col">
+    <div className="bg-white rounded-lg flex flex-1 p-4 shadow-md flex-col">
       <div className="font-semibold">{props.label}</div>
       <div className="text-sm font-light">
         {props.company} . {props.contractType}
