@@ -5,7 +5,7 @@ import { UserContextProvider } from "../contexts/UserContext";
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <UserContextProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </UserContextProvider>
   );
 };

@@ -58,7 +58,7 @@ const DropDownMenu = ({ show }: DropdownMenuProps) => {
     <div
       className={clsx(
         [!show && "hidden"],
-        "absolute top-14 right-0 bg-gray-800 w-60 rounded-lg p-2"
+        "absolute top-14 right-0 bg-gray-700 border border-gray-300 w-60 rounded-lg p-2"
       )}
     >
       <DropDownItem link="/admin" label="Administration" icon={<></>} />
