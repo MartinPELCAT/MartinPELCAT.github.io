@@ -1,1 +1,0 @@
-_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[11],{"8SM+":function(n,i,_){"use strict";_.r(i);var t=_("nKUr"),o=(_("q1tI"),_("apO0"));i.default=function(){return Object(t.jsx)(o.a,{children:"Skills"})}},GfA2:function(n,i,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/skills",function(){return _("8SM+")}])}},[["GfA2",0,2,1,3]]]);
