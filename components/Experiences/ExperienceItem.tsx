@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ExperienceType } from "../../datas/experiences";
 
-export const ExperienceItem = (props: ExperienceType) => {
+const ExperienceItem = (props: ExperienceType) => {
   const { dateLocale, t } = useContext(LanguageContext);
 
   const formatEndDate = (): string => {
@@ -36,3 +36,4 @@ export const ExperienceItem = (props: ExperienceType) => {
     </div>
   );
 };
+export default ExperienceItem;

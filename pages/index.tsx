@@ -1,6 +1,8 @@
-import { useContext, useEffect } from "react";
-import { Layout } from "../components/Layout";
+import dynamic from "next/dynamic";
+import { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
+
+const Layout = dynamic(() => import("../components/Layout"));
 
 const Home = () => {
   const { t } = useContext(LanguageContext);

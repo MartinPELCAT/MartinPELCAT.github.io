@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Header from "./Header/Header";
 
-export const Layout: FC = ({ children }) => {
+const Layout: FC = ({ children }) => {
   return (
     <div className="min-h-screen">
       <Header />
@@ -11,3 +11,5 @@ export const Layout: FC = ({ children }) => {
     </div>
   );
 };
+
+export default Layout;
