@@ -3,42 +3,42 @@ if (!self.define) {
       "require" !== e && (e += ".js");
       let s = Promise.resolve();
       return (
-        i[e] ||
+        t[e] ||
           (s = new Promise(async (s) => {
             if ("document" in self) {
-              const i = document.createElement("script");
-              (i.src = e), document.head.appendChild(i), (i.onload = s);
+              const t = document.createElement("script");
+              (t.src = e), document.head.appendChild(t), (t.onload = s);
             } else importScripts(e), s();
           })),
         s.then(() => {
-          if (!i[e]) throw new Error(`Module ${e} didn’t register its module`);
-          return i[e];
+          if (!t[e]) throw new Error(`Module ${e} didn’t register its module`);
+          return t[e];
         })
       );
     },
-    s = (s, i) => {
-      Promise.all(s.map(e)).then((e) => i(1 === e.length ? e[0] : e));
+    s = (s, t) => {
+      Promise.all(s.map(e)).then((e) => t(1 === e.length ? e[0] : e));
     },
-    i = { require: Promise.resolve(s) };
-  self.define = (s, n, a) => {
-    i[s] ||
-      (i[s] = Promise.resolve().then(() => {
-        let i = {};
-        const r = { uri: location.origin + s.slice(1) };
+    t = { require: Promise.resolve(s) };
+  self.define = (s, n, c) => {
+    t[s] ||
+      (t[s] = Promise.resolve().then(() => {
+        let t = {};
+        const i = { uri: location.origin + s.slice(1) };
         return Promise.all(
           n.map((s) => {
             switch (s) {
               case "exports":
-                return i;
+                return t;
               case "module":
-                return r;
+                return i;
               default:
                 return e(s);
             }
           })
         ).then((e) => {
-          const s = a(...e);
-          return i.default || (i.default = s), i;
+          const s = c(...e);
+          return t.default || (t.default = s), t;
         });
       }));
   };
@@ -51,82 +51,82 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
     e.precacheAndRoute(
       [
         {
-          url: "/_next/static/aRKVmPO0bVSZMZiM17NGT/_buildManifest.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
-        },
-        {
-          url: "/_next/static/aRKVmPO0bVSZMZiM17NGT/_ssgManifest.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
-        },
-        {
           url: "/_next/static/chunks/15.2c3e422e88f018fba1d3.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/4.28bd89fbc5b4de6bf55c.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url:
             "/_next/static/chunks/4e8d32e2b9bc09636fe78292560d1ab29e5809bf.c4aea8d373573d75cdb1.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/5.e3841f52a77d252f3856.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url:
             "/_next/static/chunks/7118ad5e188e7fac0bdbe233a6efc2a72fe17379.4b8dac7850f1cad8a38d.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/framework.bb026090cb9d8c12d9a0.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/main-151c5e9f74f2ee4e985d.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/pages/_app-6dc6ed475ba67770c89e.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/pages/_error-6f43d9faff1170dae9ec.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/pages/contact-60745e4f493cb6c14417.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/pages/diplomas-126d50428466aa7bbed1.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/pages/experiences-ffee7e925b068144e932.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/pages/index-563e7754290502ac1d3b.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/pages/skills-e44369fe573d7bf55df6.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/polyfills-4f4acd756cef4fe6da1b.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/chunks/webpack-ef415c17206407337195.js",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         {
           url: "/_next/static/css/fe658236b38d6ebafa7c.css",
-          revision: "aRKVmPO0bVSZMZiM17NGT",
+          revision: "exfOtpDNz1fVy_tYScWCl",
+        },
+        {
+          url: "/_next/static/exfOtpDNz1fVy_tYScWCl/_buildManifest.js",
+          revision: "exfOtpDNz1fVy_tYScWCl",
+        },
+        {
+          url: "/_next/static/exfOtpDNz1fVy_tYScWCl/_ssgManifest.js",
+          revision: "exfOtpDNz1fVy_tYScWCl",
         },
         { url: "/favicon.ico", revision: "f1231392d9b0fb70407c11b64e14f09f" },
         {

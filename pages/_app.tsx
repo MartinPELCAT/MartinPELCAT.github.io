@@ -27,11 +27,6 @@ const App = ({ Component, pageProps }: AppProps) => {
             content="React, Martin PELCAT, Martin, PELCAT, Portfolio"
             name="keywords"
           />
-          <link href="http://www.github.com" rel="preconnect" />
-          <link href="https://image.flaticon.com" rel="preconnect" />
-          <link href="https://upload.wikimedia.org" rel="preconnect" />
-          <link href="https://www.github.com" rel="preconnect" />
-          <link href="https://github.com" rel="preconnect" />
           <link
             href="https://avatars1.githubusercontent.com"
             rel="preconnect"
