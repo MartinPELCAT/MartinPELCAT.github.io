@@ -11,11 +11,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         <Head>
           <title>Portfolio | Martin PELCAT</title>
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-          <link
-            rel="shortcut icon"
-            type="image/x-icon"
-            href="/favicon.ico"
-          ></link>
+          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="manifest" href="/manifest.json" />
           <meta content="Portfolio de Martin PELCAT" name="description" />
           <meta content="text/html;charset=UTF-8" httpEquiv="Content-Type" />
           <meta content="index,follow" name="robots" />
