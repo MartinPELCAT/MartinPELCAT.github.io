@@ -10,10 +10,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <UserContextProvider>
         <Head>
           <meta charSet="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-          />
+          <meta content="width=device-width, initial-scale=1" name="viewport" />
           <title>Portfolio | Martin PELCAT</title>
           <meta content="Portfolio de Martin PELCAT" name="description" />
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
