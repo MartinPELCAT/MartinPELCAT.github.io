@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <meta content="text/html;charset=UTF-8" httpEquiv="Content-Type" />
           <meta content="index,follow" name="robots" />
           <meta content="Martin PELCAT" name="author" />
-          <link rel="apple-touch-icon" href="/icons/icon-512x512.png"></link>
+          <link rel="apple-touch-icon" href="/icons/icon-512x512.png" />
           <meta name="theme-color" content="#fff" />
           <meta
             content="-Ev6kFtDdzJY-h36VT0R4VoQzRz1Pdzj4oa6kCVPUHU"
