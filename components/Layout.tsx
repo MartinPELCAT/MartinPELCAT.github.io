@@ -6,7 +6,7 @@ const Layout: FC = ({ children }) => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <div className="md:w-1/2 mx-auto flex pt-2 pb-4 py-4">{children}</div>
+        <div className="md:w-1/2 mx-auto flex px-2 pt-4 pb-8">{children}</div>
       </main>
     </div>
   );
