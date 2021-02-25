@@ -19,19 +19,25 @@ export const experiences: ExperienceType[] = [
     location: { city: "Annecy", country: "France" },
     contractType: "Contrat en alternance",
     description: (
-      <dl>
-        <dt className="font-medium">RubyOnRails:</dt>
-        <dd>- Custom dev on BigBlueButton/GreenLight</dd>
+      <>
+        <dl>
+          <dt className="font-medium">RubyOnRails:</dt>
+          <dd>- Custom dev on BigBlueButton/GreenLight</dd>
+        </dl>
         <br />
-        <dt className="font-medium">JavaScript/Typescript:</dt>
-        <dd>- Web Chat (Electron)</dd>
-        <dd>- App Visio using BigBlueButton API (NextJs)</dd>
+        <dl>
+          <dt className="font-medium">JavaScript/Typescript:</dt>
+          <dd>- Web Chat (Electron)</dd>
+          <dd>- App Visio using BigBlueButton API (NextJs)</dd>
+        </dl>
         <br />
-        <dt className="font-medium">PHP:</dt>
-        <dd>- LimeSurvey Plugin</dd>
-        <dd>- Custom devs on Mantis bug tracker</dd>
-        <dd>- Multiple Joomla website update and custom devs</dd>
-      </dl>
+        <dl>
+          <dt className="font-medium">PHP:</dt>
+          <dd>- LimeSurvey Plugin</dd>
+          <dd>- Custom devs on Mantis bug tracker</dd>
+          <dd>- Multiple Joomla website update and custom devs</dd>
+        </dl>
+      </>
     ),
   },
   {

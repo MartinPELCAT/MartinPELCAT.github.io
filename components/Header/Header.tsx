@@ -9,7 +9,7 @@ export default function Header() {
   const user = useContext(UserContext);
 
   return (
-    <header>
+    <header className="sticky top-0">
       <div className="bg-white block md:flex text-lg sticky top-0 z-50">
         <div className="relative flex-1">
           <div className="flex justify-between">
