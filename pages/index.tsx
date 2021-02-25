@@ -7,7 +7,11 @@ const Layout = dynamic(() => import("../components/Layout"));
 const Home = () => {
   const { t } = useContext(LanguageContext);
 
-  return <Layout>{t("hello")}</Layout>;
+  return (
+    <Layout>
+      <span className="whitespace-pre-wrap">{t("profile")}</span>
+    </Layout>
+  );
 };
 
 export default Home;

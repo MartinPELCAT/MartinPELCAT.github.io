@@ -9,10 +9,12 @@ const ExperienceItem = dynamic(
 
 const Experiences = () => (
   <Layout>
-    <div className="flex flex-col space-y-4 flex-1">
-      {experiences.map((experience, i) => (
-        <ExperienceItem {...experience} key={i} />
-      ))}
+    <div className="md:w-1/2 mx-auto flex px-2 pt-4 pb-8">
+      <div className="flex flex-col space-y-4 flex-1">
+        {experiences.map((experience, i) => (
+          <ExperienceItem {...experience} key={i} />
+        ))}
+      </div>
     </div>
   </Layout>
 );
