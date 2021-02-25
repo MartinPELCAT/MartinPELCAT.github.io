@@ -9,10 +9,14 @@ import { HeaderMenuItem } from "./HeaderMenuItem";
 
 export const HeaderMenu = () => (
   <div className="justify-between flex flex-1 md:flex-none">
-    <HeaderMenuItem icon={<ProfileIcon />} link="/" />
-    <HeaderMenuItem icon={<BriefCaseIcon />} link="/experiences" />
-    <HeaderMenuItem icon={<DiplomaIcon />} link="/diplomas" />
-    <HeaderMenuItem icon={<SkillIcon />} link="/skills" />
-    <HeaderMenuItem icon={<ContactIcon />} link="/contact" />
+    <HeaderMenuItem icon={<ProfileIcon />} link="/" label="profile" />
+    <HeaderMenuItem
+      icon={<BriefCaseIcon />}
+      link="/experiences"
+      label="Experiences"
+    />
+    <HeaderMenuItem icon={<DiplomaIcon />} link="/diplomas" label="Diplomes" />
+    <HeaderMenuItem icon={<SkillIcon />} link="/skills" label="Compétences" />
+    <HeaderMenuItem icon={<ContactIcon />} link="/contact" label="Contact" />
   </div>
 );

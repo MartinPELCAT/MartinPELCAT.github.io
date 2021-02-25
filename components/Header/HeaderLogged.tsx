@@ -27,6 +27,8 @@ export const HeaderLogged = () => {
                 <img
                   src="https://www.github.com/MartinPELCAT.png"
                   alt="Github profile"
+                  height={40}
+                  width={40}
                 />
               </div>
               <div className="my-auto">
@@ -40,6 +42,7 @@ export const HeaderLogged = () => {
       </div>
       <div ref={ref} className="relative">
         <button
+          name="DropDown menu"
           onClick={() => setIsOpen((open) => !open)}
           className="h-10 w-10 rounded-full bg-white bg-opacity-20 flex justify-center items-center focus:outline-none focus:ring-1 focus:ring-white"
         >

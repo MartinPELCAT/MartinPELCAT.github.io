@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-type Props = { icon: ReactNode; link: string; label?: string };
+type Props = { icon: ReactNode; link: string; label: string };
 
 export const HeaderMenuItem = (props: Props) => {
   const { pathname } = useRouter();
@@ -14,11 +14,12 @@ export const HeaderMenuItem = (props: Props) => {
   );
 };
 
-const ItemDefaultLink = ({ icon, link }: Props) => {
+const ItemDefaultLink = ({ icon, link, label }: Props) => {
   return (
     <div className="py-1 md:px-2 flex w-1/5 justify-around">
       <Link href={link}>
         <a className="w-full">
+          <span className="sr-only">{label}</span>
           <div className="md:w-28 h-full bg-light-gray bg-opacity-0 hover:bg-opacity-70 rounded-lg justify-center flex py-4 md:py-0">
             <div className="self-center">{icon}</div>
           </div>
