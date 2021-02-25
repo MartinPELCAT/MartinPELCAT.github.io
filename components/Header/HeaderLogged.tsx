@@ -46,6 +46,7 @@ export const HeaderLogged = () => {
           onClick={() => setIsOpen((open) => !open)}
           className="h-10 w-10 rounded-full bg-white bg-opacity-20 flex justify-center items-center focus:outline-none focus:ring-1 focus:ring-white"
         >
+          <span className="sr-only">Menu Dépliant</span>
           <ChevronDown height={19} width={19} />
         </button>
 
