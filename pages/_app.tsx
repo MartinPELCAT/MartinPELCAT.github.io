@@ -28,10 +28,6 @@ const App = ({ Component, pageProps }: AppProps) => {
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/icons/icon-512x512.png" />
-          <link
-            href="https://avatars1.githubusercontent.com"
-            rel="preconnect"
-          />
         </Head>
         <Component {...pageProps} />
       </UserContextProvider>
