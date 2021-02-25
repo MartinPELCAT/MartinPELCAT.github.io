@@ -9,15 +9,13 @@ const App = ({ Component, pageProps }: AppProps) => {
     <LanguageContextProvider>
       <UserContextProvider>
         <Head>
-          <title>Portfolio | Martin PELCAT</title>
-          <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <meta charSet="UTF-8" />
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-          <link rel="manifest" href="/manifest.json" />
+          <meta content="width=device-width,initial-scale=1" name="viewport" />
+          <title>Portfolio | Martin PELCAT</title>
           <meta content="Portfolio de Martin PELCAT" name="description" />
-          <meta content="index,follow" name="robots" />
+          <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <meta content="Martin PELCAT" name="author" />
-          <link rel="apple-touch-icon" href="/icons/icon-512x512.png" />
+          <meta content="index,follow" name="robots" />
           <meta name="theme-color" content="#fff" />
           <meta
             content="-Ev6kFtDdzJY-h36VT0R4VoQzRz1Pdzj4oa6kCVPUHU"
@@ -27,11 +25,13 @@ const App = ({ Component, pageProps }: AppProps) => {
             content="React, Martin PELCAT, Martin, PELCAT, Portfolio"
             name="keywords"
           />
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/icons/icon-512x512.png" />
           <link
             href="https://avatars1.githubusercontent.com"
             rel="preconnect"
           />
-          <meta content="width=device-width,initial-scale=1" name="viewport" />
         </Head>
         <Component {...pageProps} />
       </UserContextProvider>
