@@ -6,6 +6,8 @@ import { FacebookComment } from "../icons/FacebookComment";
 import { FacebookLike } from "../icons/FacebookLike";
 import { FacebookShare } from "../icons/FacebookShare";
 import { ExperienceItemFooterItem } from "./ExperienceItemFooterItem";
+import Link from "next/link";
+import { slugifyExpUrl } from "../../pages/experience/[id]";
 
 const ExperienceItem = (props: ExperienceType) => {
   const { dateLocale, t } = useContext(LanguageContext);
@@ -26,7 +28,11 @@ const ExperienceItem = (props: ExperienceType) => {
           height={45}
           width={45}
         />
-        <div className="font-semibold">{props.label}</div>
+        <Link href={`/experience/${slugifyExpUrl(props)}`}>
+          <a>
+            <div className="font-semibold">{props.label}</div>
+          </a>
+        </Link>
       </div>
       <div className="text-sm font-light">
         {props.company} . {props.contractType}
@@ -44,7 +50,10 @@ const ExperienceItem = (props: ExperienceType) => {
         {props.location.city}, {props.location.country}
       </div>
       {props.description && (
-        <div className="mt-3 text-sm">{props.description}</div>
+        <div
+          className="mt-3 text-sm"
+          dangerouslySetInnerHTML={{ __html: props.description }}
+        />
       )}
 
       <ExperienceItemFooter />

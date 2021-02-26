@@ -1,14 +1,14 @@
 import { ReactNode } from "react";
 
 export type ExperienceType = {
-  label: ReactNode;
-  company: ReactNode;
+  label: string;
+  company: string;
   companyImage: string;
   startDate: Date;
   endDate: Date;
-  location: { city: ReactNode; country: ReactNode };
-  description?: ReactNode;
-  contractType: ReactNode;
+  location: { city: string; country: string };
+  description?: string;
+  contractType: string;
 };
 
 export const experiences: ExperienceType[] = [
@@ -20,8 +20,7 @@ export const experiences: ExperienceType[] = [
     endDate: new Date(),
     location: { city: "Annecy", country: "France" },
     contractType: "Contrat en alternance",
-    description: (
-      <>
+    description: `
         <dl>
           <dt className="font-medium">RubyOnRails:</dt>
           <dd>- Custom dev on BigBlueButton/GreenLight</dd>
@@ -39,8 +38,7 @@ export const experiences: ExperienceType[] = [
           <dd>- Custom devs on Mantis bug tracker</dd>
           <dd>- Multiple Joomla website update and custom devs</dd>
         </dl>
-      </>
-    ),
+    `,
   },
   {
     label: "Alternant développeur JAVA",
@@ -51,14 +49,12 @@ export const experiences: ExperienceType[] = [
     endDate: new Date(2020, 8),
     location: { city: "Annecy", country: "France" },
     contractType: "Contrat en alternance",
-    description: (
-      <>
+    description: `
         Maintenance and evolution of the HR software.
         <br />
         <br />
         Typescript, JavaScript(JQuery), Java 8 (Karaf, OSGI, BPMN), HTML/CSS
-      </>
-    ),
+      `,
   },
   {
     label: "Développeur JAVA",
@@ -69,14 +65,14 @@ export const experiences: ExperienceType[] = [
     endDate: new Date(2018, 7, 30),
     location: { city: "Annecy", country: "France" },
     contractType: "CDD",
-    description: (
+    description: `
       <>
         Add services in the cloud.
         <br />
         <br />
         JAVA 7 (tomcat, spring, hibernate), HTML/CSS, JavaScript(Jquery)
       </>
-    ),
+      `,
   },
   {
     label: "Stagiaire en développement Java",

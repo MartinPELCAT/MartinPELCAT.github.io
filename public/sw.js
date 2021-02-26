@@ -3,42 +3,42 @@ if (!self.define) {
       "require" !== e && (e += ".js");
       let s = Promise.resolve();
       return (
-        n[e] ||
+        a[e] ||
           (s = new Promise(async (s) => {
             if ("document" in self) {
-              const n = document.createElement("script");
-              (n.src = e), document.head.appendChild(n), (n.onload = s);
+              const a = document.createElement("script");
+              (a.src = e), document.head.appendChild(a), (a.onload = s);
             } else importScripts(e), s();
           })),
         s.then(() => {
-          if (!n[e]) throw new Error(`Module ${e} didn’t register its module`);
-          return n[e];
+          if (!a[e]) throw new Error(`Module ${e} didn’t register its module`);
+          return a[e];
         })
       );
     },
-    s = (s, n) => {
-      Promise.all(s.map(e)).then((e) => n(1 === e.length ? e[0] : e));
+    s = (s, a) => {
+      Promise.all(s.map(e)).then((e) => a(1 === e.length ? e[0] : e));
     },
-    n = { require: Promise.resolve(s) };
-  self.define = (s, t, i) => {
-    n[s] ||
-      (n[s] = Promise.resolve().then(() => {
-        let n = {};
-        const a = { uri: location.origin + s.slice(1) };
+    a = { require: Promise.resolve(s) };
+  self.define = (s, n, i) => {
+    a[s] ||
+      (a[s] = Promise.resolve().then(() => {
+        let a = {};
+        const c = { uri: location.origin + s.slice(1) };
         return Promise.all(
-          t.map((s) => {
+          n.map((s) => {
             switch (s) {
               case "exports":
-                return n;
-              case "module":
                 return a;
+              case "module":
+                return c;
               default:
                 return e(s);
             }
           })
         ).then((e) => {
           const s = i(...e);
-          return n.default || (n.default = s), n;
+          return a.default || (a.default = s), a;
         });
       }));
   };
@@ -51,91 +51,96 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
     e.precacheAndRoute(
       [
         {
-          url:
-            "/_next/static/chunks/0751351c6328c17f6dc531eb04740ddaad3e419f.efa6e56d0758a8af4290.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/aOxL92Vzqlo-D7l5-xwvy/_buildManifest.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/16.68a8469329584f873fdb.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/aOxL92Vzqlo-D7l5-xwvy/_ssgManifest.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/17.cacaf0e4bcceb59630a3.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/18.cae900bcf95f6fe03d34.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/4.399cdf50a97416857d6b.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/4.8533a9c51852b9de3b87.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/6.143ad19f014a9e2270b1.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/6.b5376ad6f5e42c227b5d.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url:
-            "/_next/static/chunks/7118ad5e188e7fac0bdbe233a6efc2a72fe17379.4b8dac7850f1cad8a38d.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/7.7729363912f91dd9afad.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
           url:
-            "/_next/static/chunks/c8f7fe3b0e41be846d5687592cf2018ff6e22687.7cb2e5c05579d69987a6.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+            "/_next/static/chunks/a621c6d6b0e0f3d9c286172de904f218404abe89.7cb2e5c05579d69987a6.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/framework.4562b91c17eb0c763be9.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url:
+            "/_next/static/chunks/b3fde4e130b99ca7088fe256fb8c354e6136b697.a9c267cac26afd58f8d0.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/main-415dafbbc2cf7065dc16.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url:
+            "/_next/static/chunks/ee9974e4832feb30b1f7a035081edf935c5b1feb.c4aea8d373573d75cdb1.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/pages/_app-11f7bf883d3853ba45ea.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/framework.f9803f2774bc67c45cde.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/pages/_error-1eef498f085a5521f46a.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/main-030d69f610e11ddcda55.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/pages/contact-d57476da451ee5d79a2e.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/pages/_app-e9d8aac504898a56bbb8.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/pages/diplomas-71585b7a0b5653bb2f34.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/pages/_error-ea4b755d6e3bc2471140.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/pages/experiences-3d13591815b663ea7707.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/pages/contact-348646bcddf26a4703ab.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/pages/index-01fe390d7f90610d12cc.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/pages/diplomas-abb6369009fca44eefad.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/pages/skills-0fb39f396a21415fa9a0.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url:
+            "/_next/static/chunks/pages/experience/%5Bid%5D-2493d0c3ab10dcdf451f.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/polyfills-28654a8145d7603786fc.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/pages/experiences-a96b48db2747172024ff.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/chunks/webpack-aeb55f54622d170899e7.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/pages/index-f32b6a3a534f574a4641.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/css/9c0039963e2f9362d16b.css",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/pages/skills-13f8aaa6569c75fc30d0.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/vQuYoMFIbtGlY20XU0mGV/_buildManifest.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/polyfills-79441a336eb07a143a5d.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         {
-          url: "/_next/static/vQuYoMFIbtGlY20XU0mGV/_ssgManifest.js",
-          revision: "vQuYoMFIbtGlY20XU0mGV",
+          url: "/_next/static/chunks/webpack-3554fde60d20bffa6dd6.js",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
+        },
+        {
+          url: "/_next/static/css/66f4acc73e50da7e10b5.css",
+          revision: "aOxL92Vzqlo-D7l5-xwvy",
         },
         { url: "/favicon.ico", revision: "f1231392d9b0fb70407c11b64e14f09f" },
         {
@@ -169,6 +174,18 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
         {
           url: "/icons/icon-512x512.png",
           revision: "8fd32e0acc9e58390a23110925abfff4",
+        },
+        {
+          url: "/images/CD74.png",
+          revision: "7afde863f8717d407bc7ff9b8dc4e3b6",
+        },
+        {
+          url: "/images/overkiz.png",
+          revision: "9b685a4f4ab8c05a2c8deb605855f13a",
+        },
+        {
+          url: "/images/sopra.png",
+          revision: "01fec4f1ab53edc612e24978573482a8",
         },
         { url: "/manifest.json", revision: "413b6b0823e10d7aaaa771cee8328808" },
         {

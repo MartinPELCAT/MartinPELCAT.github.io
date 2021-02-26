@@ -10,13 +10,16 @@
     "deploy": "npm run export && touch out/.nojekyll && npx gh-pages -d out -t true"
   },
   "dependencies": {
+    "babel-plugin-superjson-next": "^0.2.3",
     "clsx": "^1.1.1",
     "date-fns": "^2.17.0",
     "next": "10.0.7",
     "next-pwa": "^5.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-use": "^17.1.1"
+    "react-use": "^17.1.1",
+    "slugify": "^1.4.7",
+    "superjson": "^1.7.2"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
