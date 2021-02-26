@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 export type ExperienceType = {
   label: ReactNode;
   company: ReactNode;
+  companyImage: string;
   startDate: Date;
   endDate: Date;
   location: { city: ReactNode; country: ReactNode };
@@ -14,6 +15,7 @@ export const experiences: ExperienceType[] = [
   {
     label: "Étudiant en alternance",
     company: "Haute-Savoie General Council",
+    companyImage: "/images/CD74.png",
     startDate: new Date(2020, 8),
     endDate: new Date(),
     location: { city: "Annecy", country: "France" },
@@ -43,6 +45,8 @@ export const experiences: ExperienceType[] = [
   {
     label: "Alternant développeur JAVA",
     company: "Sopra HR Software",
+    companyImage: "/images/sopra.png",
+
     startDate: new Date(2019, 8),
     endDate: new Date(2020, 8),
     location: { city: "Annecy", country: "France" },
@@ -59,6 +63,8 @@ export const experiences: ExperienceType[] = [
   {
     label: "Développeur JAVA",
     company: "Overkiz",
+    companyImage: "/images/overkiz.png",
+
     startDate: new Date(2018, 6),
     endDate: new Date(2018, 7, 30),
     location: { city: "Annecy", country: "France" },
@@ -75,6 +81,8 @@ export const experiences: ExperienceType[] = [
   {
     label: "Stagiaire en développement Java",
     company: "Overkiz",
+    companyImage: "/images/overkiz.png",
+
     startDate: new Date(2018, 3),
     endDate: new Date(2018, 5, 30),
     location: { city: "Annecy", country: "France" },

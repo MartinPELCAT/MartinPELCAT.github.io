@@ -32,7 +32,7 @@ export const HeaderLogged = () => {
                 />
               </div>
               <div className="my-auto">
-                <span>
+                <span className="break-words">
                   {firstName} {lastName}
                 </span>
               </div>
