@@ -39,14 +39,14 @@ const Experience = (props: ExperienceType) => {
         <meta property="og:type" content={`website`} />
         <meta property="og:title" content={props.label} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={props.companyImage} />
+        <meta property="og:image" content={BASE_URL + props.companyImage} />
 
         <meta name="twitter:card" content={`summary_large_image`} />
         <meta property="twitter:domain" content={BASE_URL} />
         <meta property="twitter:url" content={url} />
         <meta name="twitter:title" content={props.label} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={props.companyImage} />
+        <meta name="twitter:image" content={BASE_URL + props.companyImage} />
       </Head>
       <Layout>
         <div className="md:w-1/2 mx-auto flex px-2 pt-4 pb-8">
