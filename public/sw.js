@@ -3,42 +3,42 @@ if (!self.define) {
       "require" !== e && (e += ".js");
       let s = Promise.resolve();
       return (
-        n[e] ||
+        i[e] ||
           (s = new Promise(async (s) => {
             if ("document" in self) {
-              const n = document.createElement("script");
-              (n.src = e), document.head.appendChild(n), (n.onload = s);
+              const i = document.createElement("script");
+              (i.src = e), document.head.appendChild(i), (i.onload = s);
             } else importScripts(e), s();
           })),
         s.then(() => {
-          if (!n[e]) throw new Error(`Module ${e} didn’t register its module`);
-          return n[e];
+          if (!i[e]) throw new Error(`Module ${e} didn’t register its module`);
+          return i[e];
         })
       );
     },
-    s = (s, n) => {
-      Promise.all(s.map(e)).then((e) => n(1 === e.length ? e[0] : e));
+    s = (s, i) => {
+      Promise.all(s.map(e)).then((e) => i(1 === e.length ? e[0] : e));
     },
-    n = { require: Promise.resolve(s) };
-  self.define = (s, i, a) => {
-    n[s] ||
-      (n[s] = Promise.resolve().then(() => {
-        let n = {};
-        const c = { uri: location.origin + s.slice(1) };
+    i = { require: Promise.resolve(s) };
+  self.define = (s, n, c) => {
+    i[s] ||
+      (i[s] = Promise.resolve().then(() => {
+        let i = {};
+        const a = { uri: location.origin + s.slice(1) };
         return Promise.all(
-          i.map((s) => {
+          n.map((s) => {
             switch (s) {
               case "exports":
-                return n;
+                return i;
               case "module":
-                return c;
+                return a;
               default:
                 return e(s);
             }
           })
         ).then((e) => {
-          const s = a(...e);
-          return n.default || (n.default = s), n;
+          const s = c(...e);
+          return i.default || (i.default = s), i;
         });
       }));
   };
@@ -51,96 +51,96 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
     e.precacheAndRoute(
       [
         {
-          url: "/_next/static/I_iH6jJak0ANssnz2oL9g/_buildManifest.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          url: "/_next/static/Wpcmuu1m2MibDEZU2WNuE/_buildManifest.js",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
-          url: "/_next/static/I_iH6jJak0ANssnz2oL9g/_ssgManifest.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          url: "/_next/static/Wpcmuu1m2MibDEZU2WNuE/_ssgManifest.js",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/18.cae900bcf95f6fe03d34.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/4.8533a9c51852b9de3b87.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
-          url: "/_next/static/chunks/6.b5376ad6f5e42c227b5d.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          url: "/_next/static/chunks/6.16d5c246507dccd84537.js",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/7.7729363912f91dd9afad.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url:
             "/_next/static/chunks/a621c6d6b0e0f3d9c286172de904f218404abe89.7cb2e5c05579d69987a6.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url:
             "/_next/static/chunks/b3fde4e130b99ca7088fe256fb8c354e6136b697.a9c267cac26afd58f8d0.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url:
             "/_next/static/chunks/ee9974e4832feb30b1f7a035081edf935c5b1feb.c4aea8d373573d75cdb1.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/framework.f9803f2774bc67c45cde.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/main-030d69f610e11ddcda55.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/pages/_app-e9d8aac504898a56bbb8.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/pages/_error-ea4b755d6e3bc2471140.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/pages/contact-348646bcddf26a4703ab.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/pages/diplomas-abb6369009fca44eefad.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url:
             "/_next/static/chunks/pages/experience/%5Bid%5D-2493d0c3ab10dcdf451f.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/pages/experiences-a96b48db2747172024ff.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/pages/index-f32b6a3a534f574a4641.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/pages/skills-13f8aaa6569c75fc30d0.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/chunks/polyfills-79441a336eb07a143a5d.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
-          url: "/_next/static/chunks/webpack-3554fde60d20bffa6dd6.js",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          url: "/_next/static/chunks/webpack-9efb227d208db621e851.js",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         {
           url: "/_next/static/css/66f4acc73e50da7e10b5.css",
-          revision: "I_iH6jJak0ANssnz2oL9g",
+          revision: "Wpcmuu1m2MibDEZU2WNuE",
         },
         { url: "/favicon.ico", revision: "f1231392d9b0fb70407c11b64e14f09f" },
         {

@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps<ExperienceType> = async ({
 const Experience = (props: ExperienceType) => {
   const description = `${props.description || props.label + props.company}`;
   const BASE_URL = "http://martinpelcat.github.io";
-  const url = `${BASE_URL}/${slugifyExpUrl(props)}`;
+  const url = `${BASE_URL}/experience/${slugifyExpUrl(props)}`;
 
   return (
     <>
