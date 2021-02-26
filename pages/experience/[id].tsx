@@ -34,13 +34,13 @@ const Experience = (props: ExperienceType) => {
   const { dateLocale, t } = useContext(LanguageContext);
 
   const formatEndDate = (): string => {
-    return isToday(props.endDate)
+    return isToday(endDate)
       ? t("today")
-      : format(props.endDate, "MMM yyyy", { locale: dateLocale });
+      : format(endDate, "MMM yyyy", { locale: dateLocale });
   };
 
   const dateRange = () =>
-    `${format(props.startDate, "MMM yyyy", {
+    `${format(startDate, "MMM yyyy", {
       locale: dateLocale,
     })} - ${formatEndDate()}`;
 
