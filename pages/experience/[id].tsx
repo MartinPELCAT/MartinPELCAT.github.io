@@ -39,12 +39,12 @@ const Experience = (props: ExperienceType) => {
       : format(props.endDate, "MMM yyyy", { locale: dateLocale });
   };
 
-  const date = () =>
+  const dateRange = () =>
     `${format(props.startDate, "MMM yyyy", {
       locale: dateLocale,
     })} - ${formatEndDate()}`;
 
-  const description = `${props.label} chez ${props.company} - ${date}`;
+  const description = `${props.label} chez ${props.company} - ${dateRange()}`;
   const BASE_URL = "http://martinpelcat.github.io";
   const url = `${BASE_URL}/experience/${slugifyExpUrl(props)}`;
 
