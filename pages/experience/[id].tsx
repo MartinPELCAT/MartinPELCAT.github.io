@@ -4,6 +4,9 @@ import { experiences, ExperienceType } from "../../datas/experiences";
 import slugify from "slugify";
 import ExperienceItem from "../../components/Experiences/ExperienceItem";
 import Layout from "../../components/Layout";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import { useContext } from "react";
+import { format, isToday } from "date-fns";
 
 export const slugifyExpUrl = (exp: ExperienceType) =>
   slugify(exp.label + " " + exp.company, { lower: true });
@@ -26,7 +29,22 @@ export const getStaticProps: GetStaticProps<ExperienceType> = async ({
 };
 
 const Experience = (props: ExperienceType) => {
-  const description = `${props.label} chez ${props.company}`;
+  const startDate = new Date(props.startDate);
+  const endDate = new Date(props.endDate);
+  const { dateLocale, t } = useContext(LanguageContext);
+
+  const formatEndDate = (): string => {
+    return isToday(props.endDate)
+      ? t("today")
+      : format(props.endDate, "MMM yyyy", { locale: dateLocale });
+  };
+
+  const date = () =>
+    `${format(props.startDate, "MMM yyyy", {
+      locale: dateLocale,
+    })} - ${formatEndDate()}`;
+
+  const description = `${props.label} chez ${props.company} - ${date}`;
   const BASE_URL = "http://martinpelcat.github.io";
   const url = `${BASE_URL}/experience/${slugifyExpUrl(props)}`;
 
@@ -53,8 +71,8 @@ const Experience = (props: ExperienceType) => {
           <div className="flex flex-col space-y-4 flex-1">
             <ExperienceItem
               {...props}
-              startDate={new Date(props.startDate)}
-              endDate={new Date(props.endDate)}
+              startDate={startDate}
+              endDate={endDate}
             />
           </div>
         </div>
