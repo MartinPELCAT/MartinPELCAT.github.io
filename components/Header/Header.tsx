@@ -26,7 +26,7 @@ export default function Header() {
               )}
             </div>
           </div>
-          <div className="flex justify-center flex-1 md:absolute top-0 left-1/2 right-1/2 bottom-0">
+          <div className="flex justify-center bg-white border-2 border-t md:border-none flex-1 md:absolute fixed md:top-0 md:left-1/2 md:right-1/2 md:bottom-0 bottom-0 left-0 right-0">
             <HeaderMenu />
           </div>
         </div>

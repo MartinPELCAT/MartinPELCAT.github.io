@@ -36,3 +36,10 @@ const App = ({ Component, pageProps }: AppProps) => {
 };
 
 export default App;
+
+/**
+ * /
+ * /history . Faire une ligne avec l
+ * / Projets: type youtube
+ *
+ */
