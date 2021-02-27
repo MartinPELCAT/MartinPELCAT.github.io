@@ -31,6 +31,7 @@ export const ExperienceItemFooterItem = ({
 }: ExperienceItemFooterItemProps) => (
   <div
     role="button"
+    aria-label={text}
     className="w-1/3 flex space-x-2 justify-center items-center rounded-md hover:bg-gray-200 py-1"
   >
     {icon}
