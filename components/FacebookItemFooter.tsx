@@ -1,24 +1,28 @@
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
+import { LanguageContext } from "../contexts/LanguageContext";
 import { FacebookComment } from "./icons/FacebookComment";
 import { FacebookLike } from "./icons/FacebookLike";
 import { FacebookShare } from "./icons/FacebookShare";
 
-export const FacebookItemFooter = () => (
-  <div className="border-t space-x-2 flex py-1 mt-3">
-    <ExperienceItemFooterItem
-      icon={<FacebookLike height={20} />}
-      text="J'aime"
-    />
-    <ExperienceItemFooterItem
-      icon={<FacebookComment height={20} />}
-      text="Commenter"
-    />
-    <ExperienceItemFooterItem
-      icon={<FacebookShare height={20} />}
-      text="Partager"
-    />
-  </div>
-);
+export const FacebookItemFooter = () => {
+  const { t } = useContext(LanguageContext);
+  return (
+    <div className="border-t space-x-2 flex py-1 mt-3">
+      <ExperienceItemFooterItem
+        icon={<FacebookLike height={20} />}
+        text={t("like")}
+      />
+      <ExperienceItemFooterItem
+        icon={<FacebookComment height={20} />}
+        text={t("comment")}
+      />
+      <ExperienceItemFooterItem
+        icon={<FacebookShare height={20} />}
+        text={t("share")}
+      />
+    </div>
+  );
+};
 
 type ExperienceItemFooterItemProps = { icon: ReactNode; text: string };
 export const ExperienceItemFooterItem = ({

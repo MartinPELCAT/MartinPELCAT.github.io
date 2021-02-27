@@ -4,6 +4,7 @@ import { UserContext } from "../../contexts/UserContext";
 import { HeaderLogged } from "./HeaderLogged";
 import { HeaderMenu } from "./HeaderMenu";
 import { HeaderSignIn } from "./HeaderSignIn";
+import Link from "next/link";
 
 export default function Header() {
   const user = useContext(UserContext);
@@ -14,7 +15,11 @@ export default function Header() {
         <div className="relative flex-1">
           <div className="flex justify-between">
             <div className="px-4 py-4">
-              <span className="text-2xl font-bold">Portfolio</span>
+              <Link href="/">
+                <a>
+                  <span className="text-2xl font-bold">Portfolio</span>
+                </a>
+              </Link>
             </div>
             <div className="flex pr-4 justify-center items-center space-x-1">
               {user ? (
