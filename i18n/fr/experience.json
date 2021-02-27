@@ -1,0 +1,14 @@
+{
+  "work-study-student": "Apprentice développeur web",
+  "study-contract": "Contrat en alternance",
+  "general-concil-company": "Conseil départemental de Haute-Savoie",
+  "general-concil-description": "<dl><dt className='font-medium'>RubyOnRails:</dt><dd>- Développements personnalisés sur BigBlueButton/GreenLight</dd></dl><br /><dl><dt className='font-medium'>JavaScript/Typescript:</dt><dd>- Application de tchat (Electron)</dd><dd>- Application de visio avec L'API BigBlueButton (NextJs)</dd></dl><br /><dl><dt className='font-medium'>PHP:</dt><dd>- Plugin LimeSurvey</dd><dd>- Développements personnalisés sur Mantis bug tracker</dd><dd>- Mises a jour et développements personnalisés sur plusieurs sites Joomla</dd></dl>",
+
+  "apprentice-java-dev": "Apprentice JAVA developper",
+  "sopra-description": "Maintenance et evolution d'un logiciel de RH.<br /><br />Typescript, JavaScript(JQuery), Java 8 (Karaf, OSGI, BPMN), HTML/CSS",
+
+  "java-developper": "Développeur JAVA",
+  "intership-java-developper": "Stagiaire développeur JAVA",
+  "internship": "Stage",
+  "overkiz-description-cdd": "Ajouts de services dans le cloud.<br /><br />JAVA 7 (tomcat, spring, hibernate), HTML/CSS, JavaScript(Jquery)"
+}
