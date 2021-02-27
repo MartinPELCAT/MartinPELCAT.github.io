@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <span className="whitespace-pre-wrap">{t("profile")}</span>
+      <span className="whitespace-pre-wrap">{t("hello")}</span>
     </Layout>
   );
 };

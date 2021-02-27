@@ -8,7 +8,7 @@ import { SkillIcon } from "../icons/SkillIcon";
 import { HeaderMenuItem } from "./HeaderMenuItem";
 
 export const HeaderMenu = () => (
-  <div className="justify-between flex flex-1 md:flex-none">
+  <div className="justify-between flex flex-1 lg:flex-none">
     <HeaderMenuItem icon={<ProfileIcon />} link="/" label="profile" />
     <HeaderMenuItem
       icon={<BriefCaseIcon />}

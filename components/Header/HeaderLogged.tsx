@@ -32,9 +32,10 @@ export const HeaderLogged = () => {
                 />
               </div>
               <div className="my-auto">
-                <span className="break-words">
-                  {firstName} {lastName}
-                </span>
+                <div className="flex space-x-1">
+                  <span>{firstName}</span>
+                  <span className="hidden 2xl:block">{lastName}</span>
+                </div>
               </div>
             </div>
           </a>

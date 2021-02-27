@@ -18,6 +18,8 @@ const ExperienceItem = (props: ExperienceType) => {
       : format(props.endDate, "MMM yyyy", { locale: dateLocale });
   };
 
+  const url = `/experience/${slugifyExpUrl(props)}`;
+
   return (
     <div className="bg-white rounded-lg flex flex-1 px-4 pt-4 shadow-md flex-col">
       <div className="flex items-center space-x-3 mb-3">
@@ -28,7 +30,7 @@ const ExperienceItem = (props: ExperienceType) => {
           height={45}
           width={45}
         />
-        <Link href={`/experience/${slugifyExpUrl(props)}`}>
+        <Link href={url}>
           <a>
             <div className="font-semibold">{props.label}</div>
           </a>

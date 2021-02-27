@@ -20,24 +20,24 @@ if (!self.define) {
       Promise.all(s.map(e)).then((e) => n(1 === e.length ? e[0] : e));
     },
     n = { require: Promise.resolve(s) };
-  self.define = (s, i, a) => {
+  self.define = (s, r, i) => {
     n[s] ||
       (n[s] = Promise.resolve().then(() => {
         let n = {};
-        const c = { uri: location.origin + s.slice(1) };
+        const a = { uri: location.origin + s.slice(1) };
         return Promise.all(
-          i.map((s) => {
+          r.map((s) => {
             switch (s) {
               case "exports":
                 return n;
               case "module":
-                return c;
+                return a;
               default:
                 return e(s);
             }
           })
         ).then((e) => {
-          const s = a(...e);
+          const s = i(...e);
           return n.default || (n.default = s), n;
         });
       }));
@@ -51,96 +51,96 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
     e.precacheAndRoute(
       [
         {
-          url: "/_next/static/9XGMpEH8u-SfdLAXwFhV5/_buildManifest.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
-        },
-        {
-          url: "/_next/static/9XGMpEH8u-SfdLAXwFhV5/_ssgManifest.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
-        },
-        {
           url: "/_next/static/chunks/18.cae900bcf95f6fe03d34.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/4.8533a9c51852b9de3b87.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
-          url: "/_next/static/chunks/6.c749135ab5c4aa6d16be.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          url: "/_next/static/chunks/6.0c23c56a5a5f2accee69.js",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/7.7729363912f91dd9afad.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url:
             "/_next/static/chunks/a621c6d6b0e0f3d9c286172de904f218404abe89.7cb2e5c05579d69987a6.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url:
             "/_next/static/chunks/b3fde4e130b99ca7088fe256fb8c354e6136b697.a9c267cac26afd58f8d0.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url:
             "/_next/static/chunks/ee9974e4832feb30b1f7a035081edf935c5b1feb.c4aea8d373573d75cdb1.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/framework.f9803f2774bc67c45cde.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/main-030d69f610e11ddcda55.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/pages/_app-e9d8aac504898a56bbb8.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/pages/_error-ea4b755d6e3bc2471140.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/pages/contact-348646bcddf26a4703ab.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/pages/diplomas-abb6369009fca44eefad.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url:
             "/_next/static/chunks/pages/experience/%5Bid%5D-2493d0c3ab10dcdf451f.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/pages/experiences-a96b48db2747172024ff.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/pages/index-f32b6a3a534f574a4641.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/pages/skills-13f8aaa6569c75fc30d0.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/chunks/polyfills-79441a336eb07a143a5d.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
-          url: "/_next/static/chunks/webpack-55ac867d09fc86e08f51.js",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          url: "/_next/static/chunks/webpack-162cc0db47f2bd445a28.js",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         {
           url: "/_next/static/css/66f4acc73e50da7e10b5.css",
-          revision: "9XGMpEH8u-SfdLAXwFhV5",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
+        },
+        {
+          url: "/_next/static/ntUrF0df_AzXSVkGY-q2b/_buildManifest.js",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
+        },
+        {
+          url: "/_next/static/ntUrF0df_AzXSVkGY-q2b/_ssgManifest.js",
+          revision: "ntUrF0df_AzXSVkGY-q2b",
         },
         { url: "/favicon.ico", revision: "f1231392d9b0fb70407c11b64e14f09f" },
         {

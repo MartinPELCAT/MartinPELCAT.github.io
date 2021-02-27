@@ -16,11 +16,11 @@ export const HeaderMenuItem = (props: Props) => {
 
 const ItemDefaultLink = ({ icon, link, label }: Props) => {
   return (
-    <div className="py-1 md:px-2 flex w-1/5 justify-around">
+    <div className="py-1 lg:px-2 flex w-1/5 justify-around">
       <Link href={link}>
         <a className="w-full">
           <span className="sr-only">{label}</span>
-          <div className="md:w-28 h-full bg-light-gray bg-opacity-0 hover:bg-opacity-70 rounded-lg justify-center flex py-4 md:py-0">
+          <div className="lg:w-28 h-full bg-light-gray bg-opacity-0 hover:bg-opacity-70 rounded-lg justify-center flex py-4 lg:py-0">
             <div className="self-center">{icon}</div>
           </div>
         </a>
@@ -31,8 +31,8 @@ const ItemDefaultLink = ({ icon, link, label }: Props) => {
 
 const ItemActiveLink = ({ icon }: Props) => {
   return (
-    <div className="flex border-b-3 md:px-2 border-gray-400 w-1/5 justify-around">
-      <div className="md:w-28 h-full rounded-lg justify-center flex py-4 md:py-0">
+    <div className="flex border-b-3 lg:px-2 border-gray-400 w-1/5 justify-around">
+      <div className="lg:w-28 h-full rounded-lg justify-center flex py-4 lg:py-0">
         <div className="self-center mt-3px">{icon}</div>
       </div>
     </div>

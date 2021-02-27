@@ -10,13 +10,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0">
-      <div className="bg-white block md:flex text-lg sticky top-0 z-50">
+      <div className="bg-white block lg:flex text-lg sticky top-0 z-50">
         <div className="relative flex-1">
           <div className="flex justify-between">
             <div className="px-4 py-4">
               <span className="text-2xl font-bold">Portfolio</span>
             </div>
-            <div className="flex pr-4 justify-center items-center space-x-2">
+            <div className="flex pr-4 justify-center items-center space-x-1">
               {user ? (
                 <HeaderContextProvider>
                   <HeaderLogged />
@@ -26,7 +26,7 @@ export default function Header() {
               )}
             </div>
           </div>
-          <div className="flex justify-center bg-white border-2 border-t md:border-none flex-1 md:absolute fixed md:top-0 md:left-1/2 md:right-1/2 md:bottom-0 bottom-0 left-0 right-0">
+          <div className="flex justify-center bg-white border-2 border-t lg:border-none flex-1 lg:absolute fixed lg:top-0 lg:left-1/2 lg:right-1/2 lg:bottom-0 bottom-0 left-0 right-0">
             <HeaderMenu />
           </div>
         </div>

@@ -51,7 +51,7 @@ const Experience = (props: ExperienceType) => {
   return (
     <>
       <Head>
-        <title>Portfolio | {props.label}</title>
+        <title>{props.label}</title>
         <meta name="description" content={description} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content={`website`} />
@@ -67,7 +67,7 @@ const Experience = (props: ExperienceType) => {
         <meta name="twitter:image" content={BASE_URL + props.companyImage} />
       </Head>
       <Layout>
-        <div className="md:w-1/2 mx-auto flex px-2 pt-4 pb-8">
+        <div className="lg:w-1/2 mx-auto flex px-2 pt-4 pb-8">
           <div className="flex flex-col space-y-4 flex-1">
             <ExperienceItem
               {...props}
