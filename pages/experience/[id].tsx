@@ -59,7 +59,7 @@ const Experience = (props: ExperienceType) => {
         <meta property="og:description" content={description} />
         <meta property="og:image" content={BASE_URL + props.companyImage} />
 
-        <meta name="twitter:card" content={`summary_large_image`} />
+        <meta name="twitter:card" content={`app`} />
         <meta property="twitter:domain" content={BASE_URL} />
         <meta property="twitter:url" content={url} />
         <meta name="twitter:title" content={props.label} />
