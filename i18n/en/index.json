@@ -1,3 +1,6 @@
 {
-  "hello": "Hello EN!"
+  "hello": "Hello EN!",
+  "like": "Like",
+  "comment": "Comment",
+  "share": "Share"
 }
