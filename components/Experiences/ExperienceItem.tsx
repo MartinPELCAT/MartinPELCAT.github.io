@@ -2,12 +2,9 @@ import { format, formatDistanceStrict, isToday } from "date-fns";
 import { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ExperienceType } from "../../datas/experiences";
-import { FacebookComment } from "../icons/FacebookComment";
-import { FacebookLike } from "../icons/FacebookLike";
-import { FacebookShare } from "../icons/FacebookShare";
-import { ExperienceItemFooterItem } from "./ExperienceItemFooterItem";
 import Link from "next/link";
 import { slugifyExpUrl } from "../../pages/experience/[id]";
+import { FacebookItemFooter } from "../FacebookItemFooter";
 
 const ExperienceItem = (props: ExperienceType) => {
   const { dateLocale, t } = useContext(LanguageContext);
@@ -32,12 +29,12 @@ const ExperienceItem = (props: ExperienceType) => {
         />
         <Link href={url}>
           <a>
-            <div className="font-semibold">{props.label}</div>
+            <div className="font-semibold">{t(props.label)}</div>
           </a>
         </Link>
       </div>
       <div className="text-sm font-light">
-        {props.company} . {props.contractType}
+        {t(props.company)} . {t(props.contractType)}
       </div>
       <div>
         <div>
@@ -54,29 +51,12 @@ const ExperienceItem = (props: ExperienceType) => {
       {props.description && (
         <div
           className="mt-3 text-sm"
-          dangerouslySetInnerHTML={{ __html: props.description }}
+          dangerouslySetInnerHTML={{ __html: t(props.description) }}
         />
       )}
 
-      <ExperienceItemFooter />
+      <FacebookItemFooter />
     </div>
   );
 };
 export default ExperienceItem;
-
-const ExperienceItemFooter = () => (
-  <div className="border-t space-x-2 flex py-1 mt-3">
-    <ExperienceItemFooterItem
-      icon={<FacebookLike height={20} />}
-      text="J'aime"
-    />
-    <ExperienceItemFooterItem
-      icon={<FacebookComment height={20} />}
-      text="Commenter"
-    />
-    <ExperienceItemFooterItem
-      icon={<FacebookShare height={20} />}
-      text="Partager"
-    />
-  </div>
-);

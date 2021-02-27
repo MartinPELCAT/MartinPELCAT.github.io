@@ -19,6 +19,7 @@ const config: {
     files: [
       require("../public/i18n/fr"),
       require("../public/i18n/fr/date.json"),
+      require("../public/i18n/fr/experience.json"),
     ],
     date: fr,
   },
@@ -26,6 +27,7 @@ const config: {
     files: [
       require("../public/i18n/en"),
       require("../public/i18n/en/date.json"),
+      require("../public/i18n/en/experience.json"),
     ],
     date: enUS,
   },
@@ -61,12 +63,12 @@ export const LanguageContextProvider: FC = ({ children }) => {
   useEffect(() => {
     const navLanguage = navigator.language.slice(0, 2) as Locale;
     if (Object.keys(config).includes(navLanguage)) {
-      //   setLocale(navLanguage); // french first
+      setLocale(navLanguage); // french first
     }
   }, []);
 
   const translate = (key: string): string => {
-    return datas[key] || `! KEY : '${key}' MISSING !`;
+    return datas[key] || key;
   };
 
   return (

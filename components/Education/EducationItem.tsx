@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { EducationType } from "../../datas/educations";
 import {} from "../../datas/experiences";
+import { FacebookItemFooter } from "../FacebookItemFooter";
 
 const EducationItem = (props: EducationType) => {
   const { dateLocale, t } = useContext(LanguageContext);
@@ -14,7 +15,7 @@ const EducationItem = (props: EducationType) => {
   };
 
   return (
-    <div className="bg-white rounded-lg flex flex-1 p-4 shadow-md flex-col">
+    <div className="bg-white rounded-lg flex flex-1 px-4 pt-4 shadow-md flex-col">
       <div className="font-semibold">{props.label}</div>
       <div className="text-sm font-light">{props.school}</div>
       <div>
@@ -32,6 +33,7 @@ const EducationItem = (props: EducationType) => {
       {props.description && (
         <div className="my-3 text-sm">{props.description}</div>
       )}
+      <FacebookItemFooter />
     </div>
   );
 };
