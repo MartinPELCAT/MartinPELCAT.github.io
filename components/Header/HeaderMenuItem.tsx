@@ -31,9 +31,9 @@ const ItemDefaultLink = ({ icon, link, label }: Props) => {
 
 const ItemActiveLink = ({ icon }: Props) => {
   return (
-    <div className="flex border-b-3 lg:px-2 border-gray-400 w-1/5 justify-around">
+    <div className="flex border-t-3 lg:border-t-0 lg:border-b-3 lg:px-2 border-gray-400 w-1/5 justify-around">
       <div className="lg:w-28 h-full rounded-lg justify-center flex py-4 lg:py-0">
-        <div className="self-center mt-3px">{icon}</div>
+        <div className="self-center mb-3px lg:mb-0 lg:mt-3px">{icon}</div>
       </div>
     </div>
   );

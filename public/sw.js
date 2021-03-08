@@ -20,13 +20,13 @@ if (!self.define) {
       Promise.all(s.map(e)).then((e) => n(1 === e.length ? e[0] : e));
     },
     n = { require: Promise.resolve(s) };
-  self.define = (s, c, i) => {
+  self.define = (s, a, i) => {
     n[s] ||
       (n[s] = Promise.resolve().then(() => {
         let n = {};
         const t = { uri: location.origin + s.slice(1) };
         return Promise.all(
-          c.map((s) => {
+          a.map((s) => {
             switch (s) {
               case "exports":
                 return n;
@@ -51,96 +51,96 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
     e.precacheAndRoute(
       [
         {
-          url: "/_next/static/chunks/18.7c0d8350ff8243502ab8.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          url: "/_next/static/SbaGlLpJ0QgdKCjt_uXXY/_buildManifest.js",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
-          url: "/_next/static/chunks/4.d70e6d2e0a9e87585f25.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          url: "/_next/static/SbaGlLpJ0QgdKCjt_uXXY/_ssgManifest.js",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
+        },
+        {
+          url: "/_next/static/chunks/18.7c0d8350ff8243502ab8.js",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
+        },
+        {
+          url: "/_next/static/chunks/4.8d78a7b59bae97cdc3bf.js",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/6.46dd4e6be3600a3cabcc.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/7.7729363912f91dd9afad.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url:
-            "/_next/static/chunks/a621c6d6b0e0f3d9c286172de904f218404abe89.aca8e8961bd7e94166ef.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+            "/_next/static/chunks/a621c6d6b0e0f3d9c286172de904f218404abe89.c9025eb4fa00bead3af6.js",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url:
             "/_next/static/chunks/b3fde4e130b99ca7088fe256fb8c354e6136b697.a9c267cac26afd58f8d0.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url:
-            "/_next/static/chunks/ee9974e4832feb30b1f7a035081edf935c5b1feb.ae42eba3fcd9b4b93286.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+            "/_next/static/chunks/ee9974e4832feb30b1f7a035081edf935c5b1feb.b78c70d5dc58f07d7ffe.js",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/framework.f9803f2774bc67c45cde.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/main-030d69f610e11ddcda55.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/pages/_app-b09675b8d9eb1577063e.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/pages/_error-ea4b755d6e3bc2471140.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/pages/contact-348646bcddf26a4703ab.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/pages/diplomas-1ad29597b42675af37d7.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url:
             "/_next/static/chunks/pages/experience/%5Bid%5D-2493d0c3ab10dcdf451f.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/pages/experiences-fc0837b11c02a561790d.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/pages/index-6b3d668ab3a1f2820c87.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/pages/skills-13f8aaa6569c75fc30d0.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/chunks/polyfills-79441a336eb07a143a5d.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
-          url: "/_next/static/chunks/webpack-d7f718554e04868242a1.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          url: "/_next/static/chunks/webpack-2911bbecc7f376677f39.js",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         {
           url: "/_next/static/css/9c55eab687382de33603.css",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
-        },
-        {
-          url: "/_next/static/sp6EtRYxmA7pmD-cglYpX/_buildManifest.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
-        },
-        {
-          url: "/_next/static/sp6EtRYxmA7pmD-cglYpX/_ssgManifest.js",
-          revision: "sp6EtRYxmA7pmD-cglYpX",
+          revision: "SbaGlLpJ0QgdKCjt_uXXY",
         },
         { url: "/favicon.ico", revision: "f1231392d9b0fb70407c11b64e14f09f" },
         {
@@ -153,7 +153,7 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
         },
         {
           url: "/i18n/en/index.json",
-          revision: "364caf0f456e4502063708e32b19b7d3",
+          revision: "676cf343827a384bf6d64af06f160479",
         },
         {
           url: "/i18n/fr/date.json",
@@ -165,7 +165,7 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
         },
         {
           url: "/i18n/fr/index.json",
-          revision: "9d315ae7d3fc1c92875c35382b885521",
+          revision: "93c6f1459d24f418e8cb7de9ba3adf3b",
         },
         {
           url: "/icons/icon-192x192.png",
