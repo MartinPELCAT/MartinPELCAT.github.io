@@ -10,6 +10,7 @@
     "deploy": "npm run export && touch out/.nojekyll && npx gh-pages -d out -t true"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "clsx": "^1.1.1",
     "date-fns": "^2.17.0",
     "next": "10.0.7",

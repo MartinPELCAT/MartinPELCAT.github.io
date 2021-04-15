@@ -1,5 +1,6 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
+import "../assets/custom.css";
 import "tailwindcss/tailwind.css";
 import { LanguageContextProvider } from "../contexts/LanguageContext";
 import { UserContextProvider } from "../contexts/UserContext";

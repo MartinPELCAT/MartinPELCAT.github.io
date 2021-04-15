@@ -1,1 +1,1 @@
-export type IconProps = { width?: number; height?: number; fill?: string };
+export type IconProps = { width?: number; height?: number };

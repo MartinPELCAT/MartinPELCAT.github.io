@@ -5,7 +5,7 @@ export default class CustomDocument extends Document {
     return (
       <Html lang="fr">
         <Head />
-        <body className="antialiased text-primary bg-light-gray overflow-y-scroll">
+        <body className="font-inter antialiased text-primary bg-light-gray overflow-y-scroll">
           <Main />
           <NextScript />
         </body>

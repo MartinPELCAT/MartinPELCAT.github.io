@@ -20,7 +20,7 @@ const ItemDefaultLink = ({ icon, link, label }: Props) => {
       <Link href={link}>
         <a className="w-full">
           <span className="sr-only">{label}</span>
-          <div className="lg:w-28 h-full bg-light-gray bg-opacity-0 hover:bg-opacity-70 rounded-lg justify-center flex py-4 lg:py-0">
+          <div className="lg:w-28 h-full bg-light-gray bg-opacity-0 text-gray-500 hover:bg-opacity-70 rounded-lg justify-center flex py-4 lg:py-0">
             <div className="self-center">{icon}</div>
           </div>
         </a>
@@ -31,7 +31,7 @@ const ItemDefaultLink = ({ icon, link, label }: Props) => {
 
 const ItemActiveLink = ({ icon }: Props) => {
   return (
-    <div className="flex border-t-3 lg:border-t-0 lg:border-b-3 lg:px-2 border-gray-400 w-1/5 justify-around">
+    <div className="flex border-t-3 lg:border-t-0 lg:border-b-3 lg:px-2 text-indigo-400 border-indigo-400 w-1/5 justify-around">
       <div className="lg:w-28 h-full rounded-lg justify-center flex py-4 lg:py-0">
         <div className="self-center mb-3px lg:mb-0 lg:mt-3px">{icon}</div>
       </div>

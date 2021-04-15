@@ -7,7 +7,7 @@ import { FacebookShare } from "./icons/FacebookShare";
 export const FacebookItemFooter = () => {
   const { t } = useContext(LanguageContext);
   return (
-    <div className="border-t space-x-2 flex py-1 mt-3">
+    <div className="border-t space-x-2 flex py-1 mt-3 text-gray-500">
       <ExperienceItemFooterItem
         icon={<FacebookLike height={20} />}
         text={t("like")}
@@ -35,6 +35,6 @@ export const ExperienceItemFooterItem = ({
     className="w-1/3 flex space-x-2 justify-center items-center rounded-md hover:bg-gray-200 py-1"
   >
     {icon}
-    <span className="hidden md:block">{text}</span>
+    <span className="hidden md:block text-gray-800">{text}</span>
   </div>
 );

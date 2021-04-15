@@ -21,10 +21,13 @@ module.exports = {
       borderColor: {
         "light-gray": "#f0f2f5",
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };
