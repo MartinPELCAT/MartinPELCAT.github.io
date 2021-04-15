@@ -20,7 +20,7 @@ export const HeaderLogged = () => {
   return (
     <>
       <div className="flex cursor-pointer">
-        <Link href="/profile">
+        <Link href="/">
           <a>
             <div className="flex rounded-full hover:bg-white hover:bg-opacity-10 py-1 pl-2 pr-4 space-x-3">
               <div className="w-10 h-10 rounded-full bg-white bg-opacity-40 overflow-hidden">
@@ -68,7 +68,7 @@ const DropDownMenu = ({ show }: DropdownMenuProps) => {
         "absolute top-14 right-0 bg-white border border-gray-300 w-60 rounded-lg p-2"
       )}
     >
-      <DropDownItem link="/admin" label="Administration" icon={<></>} />
+      {/* <DropDownItem link="/admin" label="Administration" icon={<></>} /> */}
       <DropDownItem label="Paramètres" icon={<></>} />
       <DropDownItem
         label="Language"
