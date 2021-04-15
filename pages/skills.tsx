@@ -51,8 +51,10 @@ interface Props {
 }
 const SkillItem = ({ image, text }: Props) => {
   return (
-    <div className="bg-white rounded-md shadow flex py-3 flex-col justify-between">
-      <img src={`/skills${image}`} alt="" className="px-3" />
+    <div className="bg-white rounded-md shadow flex py-3 flex-col justify-between overflow-hidden transform duration-300 hover:scale-105">
+      <div className="flex-1 flex items-center">
+        <img src={`/skills${image}`} alt="" className="px-3 " />
+      </div>
       <div className="text-center font-light italic pt-3">{text}</div>
     </div>
   );

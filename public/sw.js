@@ -3,33 +3,33 @@ if (!self.define) {
       "require" !== e && (e += ".js");
       let s = Promise.resolve();
       return (
-        a[e] ||
+        i[e] ||
           (s = new Promise(async (s) => {
             if ("document" in self) {
-              const a = document.createElement("script");
-              (a.src = e), document.head.appendChild(a), (a.onload = s);
+              const i = document.createElement("script");
+              (i.src = e), document.head.appendChild(i), (i.onload = s);
             } else importScripts(e), s();
           })),
         s.then(() => {
-          if (!a[e]) throw new Error(`Module ${e} didn’t register its module`);
-          return a[e];
+          if (!i[e]) throw new Error(`Module ${e} didn’t register its module`);
+          return i[e];
         })
       );
     },
-    s = (s, a) => {
-      Promise.all(s.map(e)).then((e) => a(1 === e.length ? e[0] : e));
+    s = (s, i) => {
+      Promise.all(s.map(e)).then((e) => i(1 === e.length ? e[0] : e));
     },
-    a = { require: Promise.resolve(s) };
-  self.define = (s, n, i) => {
-    a[s] ||
-      (a[s] = Promise.resolve().then(() => {
-        let a = {};
+    i = { require: Promise.resolve(s) };
+  self.define = (s, a, n) => {
+    i[s] ||
+      (i[s] = Promise.resolve().then(() => {
+        let i = {};
         const r = { uri: location.origin + s.slice(1) };
         return Promise.all(
-          n.map((s) => {
+          a.map((s) => {
             switch (s) {
               case "exports":
-                return a;
+                return i;
               case "module":
                 return r;
               default:
@@ -37,8 +37,8 @@ if (!self.define) {
             }
           })
         ).then((e) => {
-          const s = i(...e);
-          return a.default || (a.default = s), a;
+          const s = n(...e);
+          return i.default || (i.default = s), i;
         });
       }));
   };
@@ -51,96 +51,96 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
     e.precacheAndRoute(
       [
         {
-          url: "/_next/static/1RZEG6St-rje0dk08aHPA/_buildManifest.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
-        },
-        {
-          url: "/_next/static/1RZEG6St-rje0dk08aHPA/_ssgManifest.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
-        },
-        {
           url: "/_next/static/chunks/18.5dd5c495d9b4afafd2fe.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/4.dfe9fade2fc998383c07.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/6.46dd4e6be3600a3cabcc.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/7.7729363912f91dd9afad.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url:
             "/_next/static/chunks/a621c6d6b0e0f3d9c286172de904f218404abe89.c85ede1a2055f7e37e79.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url:
             "/_next/static/chunks/b3fde4e130b99ca7088fe256fb8c354e6136b697.a9c267cac26afd58f8d0.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url:
             "/_next/static/chunks/ee9974e4832feb30b1f7a035081edf935c5b1feb.b78c70d5dc58f07d7ffe.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/framework.f9803f2774bc67c45cde.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/main-030d69f610e11ddcda55.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
-          url: "/_next/static/chunks/pages/_app-b599f680c73161183db5.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          url: "/_next/static/chunks/pages/_app-1f128be5adaeb17fc09a.js",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/pages/_error-ea4b755d6e3bc2471140.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/pages/contact-348646bcddf26a4703ab.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/pages/diplomas-e7b6a0a7a0a1f30ab63c.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url:
             "/_next/static/chunks/pages/experience/%5Bid%5D-2493d0c3ab10dcdf451f.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/pages/experiences-fc0837b11c02a561790d.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/pages/index-49c908968938efd5a08a.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
-          url: "/_next/static/chunks/pages/skills-13f8aaa6569c75fc30d0.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          url: "/_next/static/chunks/pages/skills-9ab9875b9dbf7f4d8d5b.js",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/polyfills-79441a336eb07a143a5d.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
           url: "/_next/static/chunks/webpack-d35ca221132433de568a.js",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         {
-          url: "/_next/static/css/d47794a6b00f8bf1a2f7.css",
-          revision: "1RZEG6St-rje0dk08aHPA",
+          url: "/_next/static/css/7f037136c5291aa41a1f.css",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
+        },
+        {
+          url: "/_next/static/w3JFHU0gZ_5UFX_lzjI4y/_buildManifest.js",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
+        },
+        {
+          url: "/_next/static/w3JFHU0gZ_5UFX_lzjI4y/_ssgManifest.js",
+          revision: "w3JFHU0gZ_5UFX_lzjI4y",
         },
         { url: "/favicon.ico", revision: "f1231392d9b0fb70407c11b64e14f09f" },
         {
@@ -212,6 +212,102 @@ define("./sw.js", ["./workbox-a8b10d99"], function (e) {
         {
           url: "/manifest.webmanifest",
           revision: "0d9dbbcd6c5c2ec8fa26dbf3b6e38344",
+        },
+        {
+          url: "/skills/OSGI.png",
+          revision: "2b2a159a34b5ead01a9148658a9b73cb",
+        },
+        {
+          url: "/skills/anglais.png",
+          revision: "20d6bc1f46c9699e686e84cdadbcd362",
+        },
+        {
+          url: "/skills/csharp.png",
+          revision: "72861c60d8c6f444fab457fc8f2177cb",
+        },
+        {
+          url: "/skills/git.png",
+          revision: "728ff5a8e44d74cd0f2359ef0a9ec88a",
+        },
+        {
+          url: "/skills/graphql.png",
+          revision: "e7f32a3e1c538ef387b2abf5a55d5468",
+        },
+        {
+          url: "/skills/hibernate.png",
+          revision: "266087b807ed06c32518d8f94941cf78",
+        },
+        {
+          url: "/skills/java.png",
+          revision: "4eb1819dc863ef386e09d86e9f482a9f",
+        },
+        {
+          url: "/skills/javascript.png",
+          revision: "095e65afaeb6bb732773bff90f5d7f24",
+        },
+        {
+          url: "/skills/jquery.gif",
+          revision: "9999c1a8c347b81c5cb5df967664c4c3",
+        },
+        {
+          url: "/skills/laravel.png",
+          revision: "b0ba6d0d7144a425934b9f2daab2b971",
+        },
+        {
+          url: "/skills/mysql.png",
+          revision: "25c275d881fc8199e59e2f5fa4af3832",
+        },
+        {
+          url: "/skills/next-js.svg",
+          revision: "b5d25ca3c0decaea251b75c69a934e8b",
+        },
+        {
+          url: "/skills/nodejs.png",
+          revision: "85458a6717bed07d7db5146928d3cdd0",
+        },
+        {
+          url: "/skills/office.png",
+          revision: "8a7db4271f1103fe195591ce3e500faa",
+        },
+        {
+          url: "/skills/oracle.png",
+          revision: "77742a1cf484dfe3b24da588e4829931",
+        },
+        {
+          url: "/skills/php.png",
+          revision: "1b29a538acb3efa07b2289d932b2daa9",
+        },
+        {
+          url: "/skills/postgresql.png",
+          revision: "50156c71fb2cf47d5cfe134231975922",
+        },
+        {
+          url: "/skills/python.png",
+          revision: "48d5e2ff23c70d96fcd2375d622eea27",
+        },
+        {
+          url: "/skills/react.png",
+          revision: "b44a1baec38ef8b3d2f1cfd39c3e3b3d",
+        },
+        {
+          url: "/skills/rest.png",
+          revision: "2771b76a468ca5438b7a0c34a74aad84",
+        },
+        {
+          url: "/skills/spring.png",
+          revision: "539d308c4f0064736a0d846381fab72e",
+        },
+        {
+          url: "/skills/symfony.png",
+          revision: "904eeade0431adb7708940e3bc08c53f",
+        },
+        {
+          url: "/skills/tailwindcss.png",
+          revision: "4f4e8c9dbbc104e79c2f23ced37aa7f4",
+        },
+        {
+          url: "/skills/typescript.png",
+          revision: "8388f7a973742b602ab63df5e1094a6c",
         },
       ],
       { ignoreURLParametersMatching: [] }
